@@ -6,6 +6,9 @@ def textToBed(input_text_file, output_bed_file, chromosome_name):
 
   f = open(output_bed_file, "w")
 
+  # Write header
+  f.write("Chrom\tStart\tStop\tScore\tStrand\tLength\n")
+
   adjust = 1 #adjust for quadron to bed conversion: bed file is zero-based
   for i in range(0, len(data)):
       crit = data[i].split()
